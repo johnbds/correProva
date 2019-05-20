@@ -6,29 +6,51 @@
 
 /**
  *
- * @author ifnmg
+ * @author JohnB
  */
 public class Filme {
-    private Data dataLancamento;
-    private Diretor diretor;
-    private String genero;
+     private Diretor NDiretor;
+    private Data DataLancamento;
+    private String Genero;
+    
+    public Diretor getNDiretor(){
+        return this.NDiretor;
+    }
+    public void setNDiretor(Diretor n){
+        this.NDiretor = n;
+    }
     
     public Data getDataLancamento(){
-        return this.dataLancamento;
+        return this.DataLancamento;
     }
-    public Diretor getDiretor(){
-        return this.diretor;
-    }
-    public String getGenero(){
-        return this.genero;
-    }
-     
-    public void getMostrarFil(){
-        System.out.println("Data de Lançamento:" + getDataLancamento() +  "Diretor:" + getDiretor() + "Genero:" + getGenero());
+    public void setDataLancamento(Data d,Data m,Data a){
+        this.DataLancamento = d;
+        this.DataLancamento = m;
+        this.DataLancamento = a;
     }
     
-    public boolean setInfoGenero(String g){
+    public String getGenero(){
+        return this.Genero;
+    }
+    public void setGenero(String g){
+        this.Genero = g;
+    }
+    
+    public void Mostrar(){
+        System.out.println("Diretor: " + this.getNDiretor());
+        System.out.println("Lançamento: " + this.getDataLancamento());
+        System.out.println("Genêro: " + this.getGenero());
+    }
         
+    public boolean InformaGenero(String G){
+        if((G == "Terror")||(G == "Romance")||(G == "Ação")){
+            this.Genero = G;
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     
 }
+

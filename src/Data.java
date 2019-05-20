@@ -14,12 +14,21 @@ public class Data {
     public int getDia(){
         return this.dia;
 }
+    public void setDia( int d){
+        this.dia = d;
+    }
     public int getMes(){
         return this.mes;
 }
+    public void setMes(int m){
+        this.mes = m;
+    }
     public int getAno(){
         return this.ano;
 }
+    public void setAno(int a){
+        this.ano = a;
+    }
     public void getMostrar (){
        System.out.println("Dia:" + getDia() + "Mes:" + getMes() + "Ano:" + getAno());
     }
